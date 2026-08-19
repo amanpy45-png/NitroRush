@@ -24,5 +24,4 @@ print(car2.name)
 print(car2.speed)
 
 car1.accelerate()
-
 print(car2.speed)
