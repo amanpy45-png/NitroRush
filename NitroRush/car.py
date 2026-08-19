@@ -7,8 +7,7 @@ class Car:
         self.speed += 10
 
     def brake(self):
-        self.speed -= 10
-
+        self.speed = self.speed - 10
 
 car1 = Car("Red Car", 50)
 
