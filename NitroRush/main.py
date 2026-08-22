@@ -46,24 +46,24 @@ obstacle = Obstacle(350, -50, 3)
 c = Car("Player", 200, 200, 5)
 
 while running:
-    # 1. Background (Grass)
+    # Background (Grass)
     screen.fill(GRASS)
 
-    # 2. Road
+    # Road
     pygame.draw.rect(screen, ROAD, (200, 0, 400, 600))
 
-    # 3. Road boundaries
+    # Road boundaries
     pygame.draw.line(screen, WHITE, (200, 0), (200, 600), 5)
     pygame.draw.line(screen, WHITE, (600, 0), (600, 600), 5)
 
-    # 4. Center line
+    # Center line
     for y in range(0, 600, 60):
         pygame.draw.rect(screen, WHITE, (397, y, 6, 30))
 
-    # 5. CAR (Draw last so it appears on top of the road!)
+    # CAR (Draw last so it appears on top of the road!)
     pygame.draw.rect(screen, (220, 40, 40), (c.x_pos, c.y_pos, 40, 70))
 
-    # 6. OBSTACLE
+    # OBSTACLE
     pygame.draw.rect(screen, (30, 30, 30), (obstacle.x_pos, obstacle.y_pos, 40, 40))
     obstacle.move_down()
 
@@ -72,7 +72,7 @@ while running:
         obstacle.y_pos = -50
         obstacle.x_pos = random.randint(200, 560)
 
-    # 7. COLLISION DETECTION
+    # COLLISION DETECTION
     player_rect = pygame.Rect(c.x_pos, c.y_pos, 40, 70)
     obstacle_rect = pygame.Rect(obstacle.x_pos, obstacle.y_pos, 40, 40)
 
