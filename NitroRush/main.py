@@ -40,7 +40,6 @@ class Obstacle:
     def move_down(self):
         self.y_pos += self.speed
 
-
 # Create game objects
 obstacle = Obstacle(350, -50, 3)
 c = Car("Player", 200, 200, 5)
