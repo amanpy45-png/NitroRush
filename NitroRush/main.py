@@ -78,19 +78,18 @@ class Game:
         self.player = Car(
             380, 480,
             (220, 40, 40),
-            7
-        )
+            7)
+        
         self.enemy = Enemy(
             350, -100,
             (40, 40, 40),
-            5
-        )
+            5)
+        
         self.score = 0
         self.running = True
 
         self.font = pygame.font.SysFont(
-            "Arial", 28
-        )
+            "Arial", 28)
 
     def events(self):
         for event in pygame.event.get():
@@ -122,8 +121,7 @@ class Game:
 
         # collision
         if self.player.rect().colliderect(
-            self.enemy.rect()
-        ):
+            self.enemy.rect()):
             self.running = False
 
 
